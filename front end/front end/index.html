@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css">
+    <title>Formulario de registro</title>
+    <link rel="stylesheet" href="estilo.css">
+
+</head>
+<body>
+    <div class="form-container">
+        <h2 class="text-black">Formulario de Registro</h2>
+        <hr>
+        <form id="formulario" action="destino.html" onsubmit="return validar()" method="post" class="row g-3">
+            <div class="col-10 col-md-6">
+                <label for="username" class="form-label">Nombre de Usuario</label>
+                <input id="username" class="form-control" type="text" placeholder="luis345">
+                <div id="error-usuario" class="text-danger"></div>
+            </div>
+            <div class="col-12 col-md-6">
+                <label for="password" class="form-label">Contraseña</label>
+                <input id="password" class="form-control" type="password">
+                <div id="error-contraseña" class="text-danger"></div>
+            </div>
+            <div class="col-12 col-md-6">
+                <label for="confirm-password" class="form-label">Confirmar Contraseña</label>
+                <input id="confirm-password" class="form-control" type="password">
+                <div id="error-confirm-password" class="text-danger"></div>
+            </div>
+            <div class="col-12 col-md-6">
+                <label for="address" class="form-label">Dirección</label>
+                <input id="address" class="form-control" type="text" placeholder="ohiggins395">
+                <div id="error-direccion" class="text-danger"></div>
+            </div>
+            <div class="col-12 col-md-6">
+                <label class="form-label">Comuna</label>
+                <select id="comuna" class="form-select">
+                    <option value="" selected>Seleccione una comuna</option>
+                    <option value="comuna1">Temuco</option>
+                    <option value="comuna2">Lanco</option>
+                    <option value="comuna3">Valdivia</option>
+                </select>
+                <div id="error-comuna" class="text-danger"></div>
+            </div>
+            <div class="col-12 col-md-6">
+                <label class="form-label">Número de Teléfono</label>
+                <input id="phone" class="form-control" type="text" placeholder="+569 6354 6352" onblur="validarTelefono()">
+                <div id="error-telefono" class="text-danger small mt-1"></div>
+            </div>
+            <div class="col-12 col-md-6">
+                <label class="form-label">Página Web Personal</label>
+                <input id="website" class="form-control" type="text" placeholder="http://www.misitio.com">
+                <div id="error-sitio" class="text-danger"></div>
+            </div>
+            <div class="col-12 col-md-6">
+                <label class="form-label">Aficiones/Pasatiempos</label>
+                <div class="input-group mb-3">
+                    <input type="text" class="form-control" id="hobby-input" placeholder="Añadir afición">
+                    <div class="input-group-append">
+                        <button class="btn btn-outline-secondary" type="button" id="add-hobby">Añadir</button>
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <center><button class="btn btn-primary" type="submit">Registrarse</button></center>
+            </div>
+        </form>
+    </div>
+    <script src="js/validacion.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"></script> 
+</body>
+</html>
